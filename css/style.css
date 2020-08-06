@@ -1,0 +1,226 @@
+/*обращение ко всем елементам на странице*/
+*::after,
+*::before{
+    box-sizing: border-box ;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+body{
+    color: #55555500;
+    font-family: 'Lato', sana-serif;
+    font-style: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.title{
+    font-family: Georgia;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #4e5665;
+}
+.header__top{
+    background-image: url('../images/top-bg.jpg');
+    height: 100vh; /*100 % screen */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3vh;
+
+}
+
+.header__top-inner{
+    /* position: absolute;
+    width: 1360px;
+    height: 620px;
+    left: 0px;
+    top: 0px; */
+
+    border: 2px solid #ECB84C;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #fff;
+}
+
+.header__title{
+    font-weight: bold;
+    font-size: 200px;
+    line-height: 227px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+.header__text{
+    font-size: 24px;
+    line-height: 27px;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    white-space: nowrap; /*не переносит текст на новую строку*/
+    align-items: center;
+margin-bottom: -1.6vh;
+}
+.header__text::after,
+.header__text::before{
+    content: "";
+    border-top: 2px solid #ECB84C;
+    width: 100%;
+}
+.header__text::after{
+    margin-left: 2vh;
+}
+.header__text::before{
+    margin-right: 2vh;
+}
+
+
+
+.about{
+    padding: 8vh;
+}
+.about__title{
+    margin-bottom: 13px;
+}
+.about__text{
+    margin-bottom: 7px;
+}
+.about__item{
+    margin-bottom: 100px;
+    padding: 70px 0;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.about__box{
+    padding: 33px 40px 33px 40px;
+    background-color: #fff;
+    max-width: 470px;
+    position: relative;
+}
+.about__box::after,
+.about__box::before{
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 33px;
+}
+.about__box::before{
+    background-image: url('../images/decor_left.svg');
+    top: 19px;
+    left: 19px;
+} 
+.about__box::after{
+    background-image: url('../images/decor_right.svg');
+    bottom: 19px;
+    right: 19px;
+}
+.about__box-title{
+    font-family: Georgia;
+    font-size: 24px;
+    line-height: 20px;
+    color: #4e5665;
+    margin-bottom: 20px;
+}
+.about__item:nth-child(even){
+    background-position: left;
+
+}
+.about__item:nth-child(even) .about__box{
+    margin-left: auto;
+}
+.about__item:nth-child(even) .about__box::before{
+    right: 19px;
+    left: auto;
+    background-image: none;
+    border-right: 2px solid #ECB84C;
+    border-top: 2px solid #ECB84C;
+}
+.about__item:nth-child(even) .about__box::after{
+    left: 19px;
+    border-right: none;
+    border-left: 2px solid #ECB84C;
+
+}
+.photo{
+    padding: 80px 0;
+}
+
+.photo__title{
+    margin-bottom: 42px;
+}
+.photo__text{
+    padding-bottom: 48px;
+    margin-bottom: 56px;
+    position: relative;
+}
+
+.photo__text::after{
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 1px;
+    background-color: rgba(208, 212, 216, .5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+.photo__slider{
+    max-width: 640px;
+    margin: 0 auto;
+}
+.slick-arrow{
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #ecb84c;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+.slick-prev{
+    left: -20px;
+}
+.slick-next{
+    right: -20px;
+}
+.footer{
+    background: #F8F8F8;
+    padding: 55px o 32px;
+}
+.footer__items{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__items
+.footer__items-title{
+    font-weight: bold;
+    font-style: 15px;
+    line-height: 20px;
+    color: #4e5665;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.footer__items-link{
+    font-style: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+.footer__copy{
+    padding-top: 40px;
+    text-align: center;
+    font-style: 14px;
+    line-height: 19px;
+}
+
+
